@@ -39,7 +39,7 @@ router.register('api', BookViewSet, basename='book')
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include(router.urls)),
-  #path('recuperer-livre-par-auteur/<str:nom_auteur>/', views.recuperer_livre_par_auteur, name='recuperer_livre_par_auteur'),
+   # path('recuperer-livre-par-auteur/<str:nom_auteur>',BookViewSet.as_view({'get': 'list'}), name="recuperer_livre_par_auteur" )
 ]
 
 

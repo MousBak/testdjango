@@ -1,0 +1,11 @@
+
+    version: "3.0"
+
+    services:
+      web:
+        build: .
+        volumes:
+          - ./chemin_sur_hote:/app  # Remplacer ./chemin_sur_hote par le chemin de votre choix ou "." pour le répertoire courant
+        ports:
+          - '8000:8000'
+        entrypoint: /app/entrypoint.sh
